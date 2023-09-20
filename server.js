@@ -13,13 +13,7 @@ const app = express();
 
 // connecting the database
 
-
-
-//const MONGODB_URI = process.env.MONGODB_URI || config.mongoURI[app.settings.env]
-
-//connection string should be env variable
-MONGODB_URI='mongodb+srv://calvinkodalo:1234@cluster0.8b4tjou.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp';
-
+const MONGODB_URI = process.env.MONGODB_URI || config.mongoURI[app.settings.env]
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true  },(err)=>{
     if (err) {
         console.log(err)
