@@ -12,8 +12,8 @@ let image = require('./routes/image');
 const app = express();
 
 // connecting the database
-let mongodb_url = 'mongodb+srv://calvinkodalo:1234@cluster0.8b4tjou.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp';
-let dbName = 'Cluster0';
+let mongodb_url = MONGO_CONNECTION_STRING;
+let dbName = DB_NAME;
 mongoose.connect(`${mongodb_url}${dbName}`,{ useNewUrlParser: true , useUnifiedTopology: true }, (err)=>{
     if (err) console.log(err)
 });
