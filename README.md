@@ -1,4 +1,4 @@
-# gallery
+# Darkroom gallery app
 
 ## Jenkins pipeline:
 * Clones repo
